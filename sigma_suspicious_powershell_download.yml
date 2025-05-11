@@ -1,0 +1,30 @@
+title: Suspicious PowerShell Download
+id: 173e7dcf-3b14-431c-8216-a9e63f008b80
+description: Detects PowerShell commands used to download files, commonly used in malware staging
+status: experimental
+author: Elebe Kehinde Martins
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection:
+    Image|endswith: powershell.exe
+    CommandLine|contains:
+      - 'Invoke-WebRequest'
+      - 'Invoke-Expression'
+      - 'IEX'
+      - 'wget'
+      - 'curl'
+      - '.DownloadFile('
+  condition: selection
+fields:
+  - CommandLine
+  - ParentCommandLine
+  - Image
+  - User
+falsepositives:
+  - Legitimate scripts using web requests
+level: medium
+tags:
+  - attack.execution
+  - attack.t1059.001
