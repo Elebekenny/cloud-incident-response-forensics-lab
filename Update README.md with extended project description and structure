@@ -1,0 +1,25 @@
+# 🚨 Cloud Incident Response & Host Forensics Lab
+
+This project simulates enterprise-grade incident response practices in a hybrid environment, modeled after Airbus Defence and Space operations. It includes SIEM alert triage, host memory forensics, reverse engineering, and detection rule development.
+
+## 🔍 Key Features
+- SOC alert analysis using Splunk and Elastic SIEM
+- Host-based forensic investigation (Volatility, Sysmon)
+- Reverse engineering malware behavior (CyberChef)
+- Custom Sigma and YARA rule development
+- CJCSM 6510.01B-aligned incident documentation
+
+## 📁 File Structure
+- `incident_report.pdf` – Complete RCA, IoCs, and MITRE mapping
+- `detection_rules/` – Custom Sigma and YARA rules
+- `memory_analysis/` – Volatility analysis results
+- `sop_templates/` – IR SOPs aligned with CJCSM
+- `malware_sample_reversing/` – Binary analysis and decoding
+
+## 🛠 Tools & Standards
+Splunk, Volatility, CyberChef, Sigma, Sysmon, Elastic SIEM, MITRE ATT&CK, YARA, AWS (simulated), CJCSM 6510.01B
+
+## 👨‍💻 Author
+**Elebe Kehinde Martins**  
+Incident Response | Red Teaming | Cloud Security  
+[LinkedIn](https://linkedin.com/in/kehinde-elebe-555143262) | [GitHub](https://github.com/Elebekenny)
